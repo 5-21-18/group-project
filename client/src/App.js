@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
-//import logo from './logo.svg';
+import ReactDOM from 'react-dom';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 import './App.css';
+import Create from './components/Create';
+import Show from './components/Show';
+import Edit from './components/Edit';
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        {/* <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header> */}
+      <div className="App-div">
         <h1 className="App-intro">
-          Here is where the front-end of our app will live
+          Welcome to our App
         </h1>
       </div>
     );

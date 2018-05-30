@@ -18,9 +18,18 @@
   font-size: 1.5em;
 }
 
+.App-div{
+  width: 50%;
+  margin: auto;
+  margin-top: 40px;
+  border-radius: 15px;
+  text-align: center;
+}
+
 .App-intro {
   font-size: 40px;
   background-color: cadetblue;
+  border-radius:15px; 
 }
 
 @keyframes App-logo-spin {
