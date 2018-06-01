@@ -1,6 +1,7 @@
 # group-project
 
 This is a final school project
-#Developers:
+
+# Developers:
           Miranda Manriquez
           Carlos Gonzales
