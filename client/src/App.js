@@ -6,15 +6,15 @@ import './App.css';
 import Create from './components/Create';
 import Show from './components/Show';
 import Edit from './components/Edit';
+import Login from './components/login'
 
 
 class App extends Component {
   render() {
     return (
-      <div className="App-div">
-        <h1 className="App-intro">
-          Welcome to our App
-        </h1>
+      <div>
+        <h1 className="banner">Welcome to our App</h1>
+         <Login />
       </div>
     );
   }
