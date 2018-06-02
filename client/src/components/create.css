@@ -24,11 +24,22 @@ form {
 
 /* Add padding to containers */
 
-.container {
+.create-con{
     /* padding: 16px; */
     background-color: white;
     border-radius: 10px;
+    margin-top: 30px;
+    padding: 3px;
 }
+
+.register{
+    margin: 5px;
+}
+
+/* p{
+    margin: 5px;
+} */
+
 
 /* Full-width input fields */
 
@@ -65,7 +76,6 @@ input[type=password]:focus {
 
 hr {
     border: 1px solid #f1f1f1;
-    margin-bottom: 25px;
 }
 
 /* Set a style for the submit button */
@@ -73,12 +83,13 @@ hr {
 .registerbtn {
     background-color: #4CAF50;
     color: white;
-    padding: 16px 20px;
+    padding: 10px;
     margin: 8px 0;
     border: none;
     cursor: pointer;
     width: 30%;
     opacity: 0.9;
+
 }
 
 .registerbtn:hover {

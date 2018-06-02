@@ -1,19 +1,17 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
-import axios from 'axios';
-import {BrowserRouter as Router, Link} from 'react-router-dom';
-import Route from 'react-router/Route'
+import { Link } from 'react-router-dom';
 import './create.css'
+import Footer from './footer'
 
 
 class Create extends Component {
     render() {
         return ( 
-            <div className='main-div'>
+            <div className=''>
                <form action="">
-                <div className="container">
-                        <h1>Register</h1>
-                        <p>Please fill in this form to create an account.</p>
+                <div className="create-con">
+                        <h1 className="register">Register</h1>
+                        <p className="register-p">Please fill in this form to create an account.</p>
                         <hr />
                         <div>
                             <label htmlFor="Name" className="lb1"><b>Name</b></label>
@@ -43,6 +41,7 @@ class Create extends Component {
                     
                   
                 </form>
+                <Footer />
             </div>
         );
     }

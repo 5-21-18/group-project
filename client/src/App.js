@@ -7,6 +7,7 @@ import Create from './components/Create';
 import Show from './components/Show';
 import Edit from './components/Edit';
 import Login from './components/login'
+import Footer from './components/footer'
 
 
 class App extends Component {

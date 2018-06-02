@@ -1,17 +1,15 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
-import axios from 'axios';
-import {BrowserRouter as Router, Link} from 'react-router-dom';
-import Route from 'react-router/Route'
+import {Link} from 'react-router-dom';
 import './login.css'
+import Footer from './footer'
 
 
 class Login extends Component {
     render() {
         return ( 
-            <div className='main-div'>
+            <div className=''>
                  <form action="" method="post">
-                    <div className="container">
+                    <div className="login-con">
                         <label htmlFor="uname" className="lables"><b>Username</b></label>
                         <input type="text" placeholder="Enter Username" name="uname" required/>
                          <div>
@@ -21,20 +19,15 @@ class Login extends Component {
                         <div>
                             <button type="submit">Login</button>
                         </div>
-                        <div>
-                            <label>
-                                <input type="checkbox" name="remember" /> Remember me
-                            </label>
-                        </div>
-
                         <div className="container">
-                            <p className="create">Don't have an account? <Link to="Create">Create New</Link></p>
-                            <span className="psw">Forgot <a href="#">password?</a></span>
+                         <p className="create">Don't have an account? <Link to="Create">Create       New</Link></p>
                         </div>
                     </div>
 
                </form>
+               <Footer />
             </div>
+
         );
     }
 }
