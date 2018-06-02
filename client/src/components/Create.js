@@ -6,10 +6,12 @@ import './components.css'
 
 
 class Create extends Component {
+  //assuming this is to create a review or create user
+  //needs backend here
     render() {
-        return ( 
+        return (
             <div className='main-div'>
-                <h1> This is the <u>Create</u> component </h1> 
+                <h1> This is the <u>Create</u> component </h1>
             </div>
         );
     }
