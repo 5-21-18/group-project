@@ -7,29 +7,27 @@ import Footer from './footer'
 class Create extends Component {
     render() {
         return ( 
-            <div className=''>
-               <form action="">
+            <div className='main-div'>
+               <form action="" method="post">
                 <div className="create-con">
                         <h1 className="register">Register</h1>
                         <p className="register-p">Please fill in this form to create an account.</p>
+                    <div>
                         <hr />
-                        <div>
-                            <label htmlFor="Name" className="lb1"><b>Name</b></label>
-                            <input type="text" placeholder="Enter Name" name="Name" required />
-                        </div>
-                      <div>
-                        <label htmlFor="email" className="lb1"><b>Email</b></label>
-                        <input type="text" placeholder="Enter Email" name="email" required />
-                      </div>
-
-                      <div>
-                        < label htmlFor = "psw" className = "lb2"> <b> Password </b></label >
-                        <input type="password" placeholder="Enter Password" name="psw" required />
-                      </div>
-
-                      <div>
-                        <label htmlFor="psw-repeat" className="lb3"><b>Repeat Password</b></label>
-                        <input type="password" placeholder="Repeat Password" name="psw-repeat" required/>
+                        <ul>
+                          <li>
+                            <input type="text" placeholder="Enter Name" name="Name" required /> 
+                          </li>           
+                           <li>
+                             <input type="text" placeholder="Enter Email" name="email" required />     
+                           </li>            
+                            <li>
+                              <input type="password" placeholder="Enter Password" name="psw" required />
+                            </li>
+                            <li>
+                             <input type="password" placeholder="Repeat Password" name="psw-repeat" required />
+                            </li>                        
+                        </ul>
                         <hr />
                      </div>                        
                         <button type="submit" className="registerbtn">Register</button>

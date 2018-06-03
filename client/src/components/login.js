@@ -10,15 +10,18 @@ class Login extends Component {
             <div className=''>
                  <form action="" method="post">
                     <div className="login-con">
-                        <label htmlFor="uname" className="lables"><b>Username</b></label>
-                        <input type="text" placeholder="Enter Username" name="uname" required/>
-                         <div>
-                            <label htmlFor="psw" className="lables "><b>Password</b></label>
-                           <input type="password" placeholder="Enter Password" name="psw" required/>
-                        </div>
-                        <div>
-                            <button type="submit">Login</button>
-                        </div>
+                      <h1 className="register">Sign In</h1>
+                      <hr />
+                      <ul>
+                          <li>
+                             <input type="text" placeholder="Enter Username" name="uname" required />
+                          </li>
+                          <li>
+                            <input type="password" placeholder="Enter Password" name="psw" required />
+                          </li>
+                      </ul> 
+                      <hr />   
+                            <button type="submit">Login</button>   
                         <div className="container">
                          <p className="create">Don't have an account? <Link to="Create">Create       New</Link></p>
                         </div>
