@@ -1,39 +1,36 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
-import axios from 'axios';
 import {Link} from 'react-router-dom';
 import './login.css'
+import Footer from './footer'
 
 
 class Login extends Component {
     render() {
         return ( 
-            <div className='main-div'>
+            <div className=''>
                  <form action="" method="post">
-                    <div className="container">
-                        <label for="uname" className="lables"><b>Username</b></label>
-                        <input type="text" placeholder="Enter Username" name="uname" required/>
-                         <div>
-                            <label for="psw" className="lables"><b>Password</b></label>
-                           <input type="password" placeholder="Enter Password" name="psw" required/>
-                        </div>
-                        <div>
-                            <button type="submit">Login</button>
-                        </div>
-                        <div>
-                            <label>
-                                <input type="checkbox" name="remember" /> Remember me
-                            </label>
-                        </div>
-
+                    <div className="login-con">
+                      <h1 className="register">Sign In</h1>
+                      <hr />
+                      <ul>
+                          <li>
+                             <input type="text" placeholder="Enter Username" name="uname" required />
+                          </li>
+                          <li>
+                            <input type="password" placeholder="Enter Password" name="psw" required />
+                          </li>
+                      </ul> 
+                      <hr />   
+                            <button type="submit">Login</button>   
                         <div className="container">
-                            <p className="create">Don't have an account? <a href="3">Create New</a></p>
-                            <span className="psw">Forgot <a href="#">password?</a></span>
+                         <p className="create">Don't have an account? <Link to="Create">Create       New</Link></p>
                         </div>
                     </div>
 
                </form>
+               <Footer />
             </div>
+
         );
     }
 }
