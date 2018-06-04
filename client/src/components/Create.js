@@ -5,8 +5,9 @@ import Footer from './footer'
 
 
 class Create extends Component {
+  //needs backend here
     render() {
-        return ( 
+        return (
             <div className='main-div'>
                <form action="" method="post">
                 <div className="create-con">
@@ -16,28 +17,28 @@ class Create extends Component {
                         <hr />
                         <ul>
                           <li>
-                            <input type="text" placeholder="Enter Name" name="Name" required /> 
-                          </li>           
+                            <input type="text" placeholder="Enter Name" name="Name" required />
+                          </li>
                            <li>
-                             <input type="text" placeholder="Enter Email" name="email" required />     
-                           </li>            
+                             <input type="text" placeholder="Enter Email" name="email" required />
+                           </li>
                             <li>
                               <input type="password" placeholder="Enter Password" name="psw" required />
                             </li>
                             <li>
                              <input type="password" placeholder="Repeat Password" name="psw-repeat" required />
-                            </li>                        
+                            </li>
                         </ul>
                         <hr />
-                     </div>                        
+                     </div>
                         <button type="submit" className="registerbtn">Register</button>
                      <div>
                          <p>Already have an account? <Link to="/">Sign in</Link></p>
                      </div>
 
                 </div>
-                    
-                  
+
+
                 </form>
                 <Footer />
             </div>
