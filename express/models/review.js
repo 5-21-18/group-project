@@ -6,8 +6,14 @@ const Schema = mongoose.Schema;
 const reviewSchema = new Schema ({
   userID: String,
   date: { type: Date, default: Date.now },
-  title: String,
-  message: String,
+  title: {
+    type: String,
+    required: true
+  },
+  message: {
+    type: String,
+    required: true
+  },
   rating: Boolean
 });
 

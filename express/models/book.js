@@ -6,8 +6,14 @@ const Schema = mongoose.Schema;
 const bookSchema = new Schema ({
   // bookID: String,
   bookCover: String,
-  bookTitle: String,
-  bookAuthor: String,
+  bookTitle: {
+    type: String,
+    required: true
+  },
+  bookAuthor: {
+    type: String,
+    required: true
+  },
   bookSummary: String
 });
 
