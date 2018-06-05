@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import axios from 'axios';
-import { Link } from 'react-router-dom';
 import './App.css';
-import Create from './components/Create';
-import Show from './components/Show';
-import Edit from './components/Edit';
+import './components/create.css';
 import Login from './components/login'
-import Footer from './components/footer'
+
 
 
 class App extends Component {
@@ -22,3 +17,5 @@ class App extends Component {
 }
 
 export default App;
+
+
