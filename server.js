@@ -21,9 +21,9 @@ app.get('*', (req, res) => {
 });
 
 //use hidden key
-mongoose.connect(, () => {
-    console.log('connected to mongodb');
-});
+// mongoose.connect(, () => {
+//     console.log('connected to mongodb');
+// });
 
 // Development mode port
 const port = process.env.PORT || 5000;

@@ -5,7 +5,11 @@ const bookSchema = new Schema({
     title: String,
     author: String,
     img: String, //will need to figure out how to let upload pictures
-    summary: String
+    summary: String,
+    rating: Boolean /* create a function that pushes rating into an array then
+    loops through an array, +1 for true +0 for false,
+    then divide by length of the array to receive the average, convert to percentage
+    and post that to the view */
 });
 
 const Book = mongoose.model('Books', userSchema);
