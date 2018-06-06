@@ -5,6 +5,11 @@ import Footer from './footer'
 
 
 class Login extends Component {
+
+    login(){
+        //get user info
+    }
+
     render() {
         return (
             <div className=''>

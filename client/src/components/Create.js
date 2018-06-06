@@ -5,6 +5,11 @@ import Footer from './footer'
 
 
 class Create extends Component {
+
+    createUser() {
+        //post user info
+    }
+
     render() {
         return (
             <div className='main-div'>
@@ -30,7 +35,7 @@ class Create extends Component {
                         </ul>
                         <hr />
                      </div>
-                        <button type="submit" className="registerbtn">Register</button>
+                        <button type="submit" className="registerbtn" onClick="">Register</button>
                      <div>
                          <p>Already have an account? <Link to="/">Sign in</Link></p>
                      </div>
