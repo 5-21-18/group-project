@@ -1,35 +1,41 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
+import {Link} from 'react-router-dom'; //what is this?
 import './login.css'
 import Footer from './footer'
-
+//is a "view"
 
 class Login extends Component {
-     //needs backend here
+
+    login(){
+        //axios.get user info
+    }
+
     render() {
-        return ( 
+        return (
             <div className=''>
-                 <form action="" method="post">
+
+                <form action="/login" method="GET">
                     <div className="login-con">
-                      <h1 className="register">Sign In</h1>
-                      <hr />
-                      <ul>
-                          <li>
-                             <input type="text" placeholder="Enter Username" name="uname" required />
-                          </li>
-                          <li>
-                            <input type="password" placeholder="Enter Password" name="psw" required />
-                          </li>
-                      </ul> 
-                      <hr />   
-                            <button type="submit">Login</button>   
+                        <h1 className="register">Sign In</h1>
+                        <hr />
+                        <ul>
+                            <li>
+                                <input type="text" placeholder="Enter Username" name="name" required />
+                            </li>
+                            <li>
+                                <input type="password" placeholder="Enter Password" name="psw" required />
+                            </li>
+                        </ul>
+                        <hr />
+                            <button type="submit">Login</button>
                         <div className="container">
-                         <p className="create">Don't have an account? <Link to="Create">Create       New</Link></p>
+                            <p className="create">Don't have an account? <Link to="/create">Create New</Link></p>
                         </div>
                     </div>
+                </form>
 
-               </form>
                <Footer />
+
             </div>
 
         );
