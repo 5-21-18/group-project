@@ -2,7 +2,7 @@
 
 # dependencies
 /node_modules
-/mongokey.js
+/keys.js
 
 # testing
 /coverage

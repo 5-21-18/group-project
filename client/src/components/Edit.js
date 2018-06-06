@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
-
+//is a "view"
 
 class Edit extends Component {
+
     render() {
         return (
             <div className='main-div'>
