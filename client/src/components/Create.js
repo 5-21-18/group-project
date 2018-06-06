@@ -8,7 +8,7 @@ class Create extends Component {
     render() {
         return (
             <div className='main-div'>
-               <form action="" method="post">
+               <form action="/create" method="post">
                 <div className="create-con">
                         <h1 className="register">Register</h1>
                         <p className="register-p">Please fill in this form to create an account.</p>
@@ -19,7 +19,7 @@ class Create extends Component {
                             <input type="text" placeholder="Enter Name" name="Name" required />
                           </li>
                            <li>
-                             <input type="text" placeholder="Enter Email" name="email" required />
+                             <input type="email" placeholder="Enter Email" name="email" required />
                            </li>
                             <li>
                               <input type="password" placeholder="Enter Password" name="psw" required />

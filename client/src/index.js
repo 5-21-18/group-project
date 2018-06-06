@@ -16,7 +16,7 @@ ReactDOM.render(
         <Route path='/edit' component={Edit} />
         <Route path='/create' component={Create} />
         <Route path='/show' component={Show} />
-        <Route path='/Login' component={Login} />
+        <Route path='/login' component={Login} />
       </div>
   </Router>,
   document.getElementById('root'));

@@ -8,7 +8,7 @@ class Login extends Component {
     render() {
         return (
             <div className=''>
-                 <form action="" method="post">
+                 <form action="/login" method="post">
                     <div className="login-con">
                       <h1 className="register">Sign In</h1>
                       <hr />
