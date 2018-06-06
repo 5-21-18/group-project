@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 
 
 class Edit extends Component {
-    //needs backend here
     render() {
         return (
             <div className='main-div'>
@@ -10,7 +9,7 @@ class Edit extends Component {
             </div>
         );
     }
-    
+
 }
 
 export default Edit;

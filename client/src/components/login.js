@@ -5,9 +5,8 @@ import Footer from './footer'
 
 
 class Login extends Component {
-     //needs backend here
     render() {
-        return ( 
+        return (
             <div className=''>
                  <form action="" method="post">
                     <div className="login-con">
@@ -20,9 +19,9 @@ class Login extends Component {
                           <li>
                             <input type="password" placeholder="Enter Password" name="psw" required />
                           </li>
-                      </ul> 
-                      <hr />   
-                            <button type="submit">Login</button>   
+                      </ul>
+                      <hr />
+                            <button type="submit">Login</button>
                         <div className="container">
                          <p className="create">Don't have an account? <Link to="Create">Create       New</Link></p>
                         </div>

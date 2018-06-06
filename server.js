@@ -3,7 +3,6 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
-const key = require('./mongokey');
 const app = express();
 
 app.use(express.static(path.join(__dirname, 'client/build')));
@@ -17,11 +16,6 @@ app.use(cookieParser())
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname + '/client/build/index.html'));
-});
-
-// connecting to mongodb
-mongoose.connect(key.mongokey.dbURI, () => {
-  console.log("Connected to database");
 });
 
 // Development mode port

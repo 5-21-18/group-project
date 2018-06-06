@@ -5,7 +5,6 @@ import Footer from './footer'
 
 
 class Create extends Component {
-  //needs backend here
     render() {
         return (
             <div className='main-div'>
