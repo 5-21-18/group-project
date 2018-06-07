@@ -6,19 +6,30 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
+    "server": "nodemon server.js",
     "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Miranda & Carlos",
+  "license": "MIT",
   "dependencies": {
     "axios": "^0.18.0",
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
     "concurrently": "^3.5.1",
     "cookie-parser": "^1.4.3",
     "cookie-session": "^2.0.0-beta.3",
     "cors": "^2.8.4",
     "express": "^4.16.3",
+    "gravatar": "^1.6.0",
+    "jsonwebtoken": "^8.2.2",
+    "mongoose": "^5.1.4",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
     "passport-local": "^1.0.0",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "validator": "^10.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.5"
   }
 }

@@ -1,32 +1,39 @@
-// module imports
 const express = require('express');
-const path = require('path');
-const cookieParser = require('cookie-parser');
-const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-//const keys = require('./keys');
+const bodyParser = require('body-parser');
+const passport = require('passport');
+
+const users = require('./routes/api/users');
+const profile = require('./routes/api/profile');
+const posts = require('./routes/api/posts');
+
 const app = express();
 
-app.use(express.static(path.join(__dirname, 'client/build')));
-
-// app middleware
-app.use(bodyParser.json())
+//Body parser middleware
 app.use(bodyParser.urlencoded({
   extended: false
-}))
-app.use(cookieParser())
+}));
+app.use(bodyParser.json());
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname + '/client/build/index.html'));
-});
+//DB Config
+const db = require('./config/keys').mongoURI;
 
-//use hidden key
-// mongoose.connect(, () => {
-//     console.log('connected to mongodb');
-// });
+//Connect to MongoDB
+mongoose.connect(db)
+  .then(() => console.log('MongoDB Connected'))
+  .catch(err => console.log(err));
 
-// Development mode port
+//Passport middleware
+app.use(passport.initialize());
+
+//Passport config
+require('./config/passport')(passport);
+
+// Use routes
+app.use('/api/users', users);
+app.use('/api/profile', profile);
+app.use('/api/posts', posts);
+
 const port = process.env.PORT || 5000;
-app.listen(port)
 
-module.exports = app;
+app.listen(port, () => console.log(`Server running on port ${port}...`));
