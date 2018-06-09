@@ -4,6 +4,7 @@ const isEmpty = require('./is-empty');
 module.exports = function validateProfileInput(data) {
     let errors = {};
 
+    //this turn the values 'null or undefined' into an empty string because Validator.isEmty only validates empty strings
     data.handle = !isEmpty(data.handle) ? data.handle : '';
 
 
