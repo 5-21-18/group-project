@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
-import { Link } from 'react-router-dom'; //what is this?
+import { Link } from 'react-router-dom';
 import axios from 'axios';
-import './create.css'
-import Footer from './footer'
-//import model?
+import './create.css';
+import Footer from './footer';
 //is a "view"
 
 class Create extends Component {
@@ -15,7 +14,7 @@ class Create extends Component {
         let pswRepeat = document.getElementById('psw-repeat').value;
         if (psw === pswRepeat){
             //need to post to create endpoint
-            axios.post('/create', {name: name, email: email, password: psw }).then(() => {
+            axios.post('/api/users/register', {name: name, email: email, password: psw }).then(() => {
                 window.location.pathname = '/feed'; //redirect to feed
             });
         } else {
@@ -30,7 +29,7 @@ class Create extends Component {
         return (
             <div className='main-div'>
 
-                <form action="/create" method="post">
+                <form action="/api/users/register" method="post">
                     <div className="create-con">
                         <h1 className="register">Register</h1>
                         <p className="register-p">Please fill in this form to create an account.</p>
