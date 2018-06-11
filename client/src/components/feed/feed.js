@@ -13,7 +13,9 @@ class Feed extends Component{
 
     render(){
         return(
-
-        ),
+            <div>
+                Stuff
+            </div>
+        );
     }
 }
