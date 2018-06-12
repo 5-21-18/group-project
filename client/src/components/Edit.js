@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import axios from 'axios';
 //is a "view"
 
 
@@ -9,14 +10,14 @@ for reviews only. Need to have a separate component for book picture and summary
 class Edit extends Component {
 
   update() {
-    //axios.put to update reviews
     //target by id
+    axios.put()
     
   }
 
   delete() {
-    //axios.delete to delete reviews
     //target by id
+    axios.delete();
   }
 
   //need to add inputs for editing reviews
