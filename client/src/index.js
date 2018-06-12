@@ -5,10 +5,10 @@ import Bootstrap from 'bootstrap/dist/css/bootstrap.css';
 import './index.css';
 import App from './App';
 import Edit from './components/Reviews/Edit';
-import Create from './components/create/Create.js';
+import Create from './components/create_user/Create.js';
 import Login from './components/login/login.js';
 
-//add feed route
+//Do we need feed route if it can be shown in App.js?
 ReactDOM.render(
   <Router>
       <div>
@@ -19,3 +19,6 @@ ReactDOM.render(
       </div>
   </Router>,
   document.getElementById('root'));
+
+  // <Route path='/book' component={Book} />
+  // <Route path='/feed' component={Feed} />

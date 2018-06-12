@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 // import { Link } from 'react-router-dom'; 
-import CamiBooksNav from '../Navbar/Navbar';
-import Footer from '../footer';
+
 import axios from 'axios';
 //is a "view"
 
@@ -28,9 +27,9 @@ export default class Feed extends Component{
     render(){
         return(
             <div>
-                <CamiBooksNav />
-                <div>Additional content</div>
-                <Footer />
+               
+                <div>Content</div>
+    
             </div>
         );
     }

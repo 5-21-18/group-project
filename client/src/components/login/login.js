@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import './login.css'
-import Footer from './footer'
+import Footer from '../footer'
+import CamiBookNav from '../Navbar/Navbar.js';
 import axios from 'axios';
 //is a "view"
 
@@ -12,13 +13,14 @@ class Login extends Component {
             .then (res => {
                 console.log(res);
             });
-            //redirect user to feed or profile
-            //retrieve user info to display on profile
+            //redirect user to feed or profile window.location.pathname = '/feed';
+            //retrieve user info to display on profile 
     }
 
     render() {
         return (
             <div className=''>
+                <CamiBookNav />
 
                 <form action="/login" method="GET">
                     <div className="login-con">

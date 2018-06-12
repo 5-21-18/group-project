@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './create.css';
-import Footer from './footer';
+import Footer from '../footer';
+import CamiBookNav from '../Navbar/Navbar.js';
 //is a "view"
 
 class Create extends Component {
@@ -28,6 +29,7 @@ class Create extends Component {
     render() {
         return (
             <div className='main-div'>
+                <CamiBookNav />
 
                 <form action="/api/users/register" method="post">
                     <div className="create-con">
