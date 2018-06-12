@@ -15,18 +15,11 @@ class Create extends Component {
         if (psw === pswRepeat){
             //need to post to create endpoint
             axios.post('/api/users/register', {name: name, email: email, password: psw }).then(() => {
-                window.location.pathname = '/feed'; //redirect to feed
+                window.location.pathname = '/login'; //redirect to feed
             });
         } else {
             console.log("Passwords do not match");
         }
-
-        //to create user
-        axios.put(`https://localhost:5000/api/users/test`)
-            .then( res => {
-                console.log(res);
-            });
-            //redirect to login page
 
     }
 

@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Bootstrap from 'bootstrap/dist/css/bootstrap.css';
 import './index.css';
 import App from './App';
-import Edit from './components/Edit';
+import Edit from './components/Reviews/Edit';
 import Create from './components/create/Create.js';
 import Login from './components/login/login.js';
 

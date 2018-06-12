@@ -9,11 +9,11 @@ import axios from 'axios';
 export default class Feed extends Component{
     constructor(props){
         super(props);
-        this.state = {
+        this.state = []
             //state of posts displayed?
             //show 10 most recent displays?
             
-        }
+
     }
 
     showFeed() {
