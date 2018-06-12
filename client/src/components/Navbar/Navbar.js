@@ -1,6 +1,7 @@
 import React from 'react';
+import Searchbar from '../searchbar.js';
 
-import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Form, FormControl, FormGroup } from 'react-bootstrap';
+import { Navbar, Nav, NavItem } from 'react-bootstrap';
 
 export default class CamiBookNav extends React.Component {
     render() {
@@ -22,12 +23,7 @@ export default class CamiBookNav extends React.Component {
                     </Nav>
                 </div>
                 <div>
-                    <Form inline>
-                        <FormGroup controlId="form">
-                            <FormControl type="text" placeholder="Search"/>
-                        </FormGroup>
-                
-                    </Form>
+                    <Searchbar />
                 </div>
             </Navbar>
         );
