@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Form, FormControl, FormGroup } from 'react-bootstrap';
+import { Navbar, Nav, NavItem, Form, FormControl, FormGroup } from 'react-bootstrap';
 
 export default class CamiBookNav extends React.Component {
     render() {

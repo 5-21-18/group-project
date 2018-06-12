@@ -21,6 +21,13 @@ class Create extends Component {
             console.log("Passwords do not match");
         }
 
+        //to create user
+        axios.put(`https://localhost:5000/api/users/test`)
+            .then( res => {
+                console.log(res);
+            });
+            //redirect to login page
+
     }
 
 
