@@ -8,7 +8,7 @@ import axios from 'axios';
 export default class Feed extends Component{
     constructor(props){
         super(props);
-        this.state = []
+        this.state = [];
             //state of posts displayed?
             //show 10 most recent displays?
             
@@ -22,6 +22,19 @@ export default class Feed extends Component{
             .then(res => {
                 console.log(res);
             });
+        /* axios.get(`https://localhost:5000/api/posts/test`)
+            .then(this.setState(res));
+
+            renderPosts(this.props){
+                const posts = this.props.map((post,index) => {
+                    <div key={index}>{post}</div>
+                });
+
+                return <div>{posts}</div>
+            }
+            
+        
+        */
     }
 
     render(){
