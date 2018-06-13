@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import Footer from '../footer';
+import CamiBookNav from '../Navbar/Navbar.js';
 //is a "view"
 
 
@@ -24,7 +26,9 @@ class Edit extends Component {
   render() {
       return (
           <div className='main-div'>
+              <CamiBookNav />
               <h1>This is the <u>Edit</u> component</h1>
+              <Footer />
           </div>
       );
   }
