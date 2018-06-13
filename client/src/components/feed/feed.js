@@ -15,7 +15,7 @@ export default class Feed extends Component{
 
     }
 
-    showFeed() {
+    componentDidMount() {
         //axios.get
         //push reviews into an array and loop through the array, rendering each one .map()
         axios.get(`https://localhost:5000/api/posts/test`)
@@ -28,7 +28,7 @@ export default class Feed extends Component{
         return(
             <div>
                
-                <div>Content</div>
+                <div>{}</div>
     
             </div>
         );

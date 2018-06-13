@@ -13,8 +13,6 @@ class App extends Component {
     return (
       <div>
         <h1 className="banner">Welcome to our App</h1>
-          <CamiBookNav />
-          <Feed />
           <Login />
       </div>
     );
