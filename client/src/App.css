@@ -1,98 +1,48 @@
-body{
-  text-align: center;
+img {
+  width: 100%;
 }
 
-.banner{
-  font-size: 5em;
-  font-family: cursive;
-  color: rgb(245, 222, 17);
-  letter-spacing: 2px;
-  margin: 20px auto 40px auto;
+.landing {
+  position: relative;
+  background: url('./media/bg3.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin-top: -24px;
+  margin-bottom: -50px;
 }
 
-/* From create.css */
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: black;
+.landing-inner {
+  padding-top: 80px;
 }
 
-/* * {
-    box-sizing: border-box;
-} */
-
-.main-div {
-  margin-top: 50px;
+.dark-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-form {
-  text-align: center;
-  border-radius: 10px;
-}
-
-/* Add padding to containers */
-
-.create-con {
-  /* padding: 16px; */
-  background-color: white;
-  border-radius: 10px;
-  margin-top: 30px;
-  padding: 3px;
-}
-
-.register {
-  margin: 5px;
-}
-
-ul {
-  list-style-type: none;
-  margin-top: 0px;
-  padding: 0px;
-}
-
-/* Full-width input fields */
-
-input[type=text],
-input[type=password] {
-  width: 50%;
-  padding: 8px 5px;
-  margin-top: 10px;
-  display: inline-block;
-  margin: auto;
-  border: none;
-  background: #f1f1f1;
-}
-
-input[type=text]:focus,
-input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-/* Overwrite default styles of hr */
-
-hr {
-  border: 1px solid #f1f1f1;
-}
-
-/* Set a style for the submit button */
-
-.registerbtn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 30%;
+.card-form {
   opacity: 0.9;
 }
 
-.registerbtn:hover {
-  opacity: 1;
+.latest-profiles-img {
+  width: 40px;
+  height: 40px;
 }
 
-/* Add a blue text color to links */
+.form-control::placeholder {
+  color: #bbb !important;
+}
 
-a {
-  color: dodgerblue;
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  /* Set the fixed height of the footer here */
+  line-height: 20px;
 }

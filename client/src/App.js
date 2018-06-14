@@ -1,16 +1,15 @@
-import React, { Component } from 'react';
-import './App.css';
-import './components/create.css';
-import Login from './components/login'
-
-
+import React, { Component } from "react";
+import Navbar from "./components/layout/Nav_bar";
+import Footer from "./components/layout/Footer";
+import "./App.css";
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <h1 className="banner">Welcome to our App</h1>
-         <Login />
+      <div className="App">
+        <Navbar />
+        <h1>Welcome to CaMibook</h1>
+        <Footer />
       </div>
     );
   }
