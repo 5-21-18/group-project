@@ -1,18 +1,26 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom'; //what is this?
+import {Link} from 'react-router-dom';
 import './login.css'
-import Footer from './footer'
+import Footer from '../footer'
+import CamiBookNav from '../Navbar/Navbar.js';
+import axios from 'axios';
 //is a "view"
 
 class Login extends Component {
 
     login(){
-        //axios.get user info
+        axios.get(`https://localhost:5000/api/users/test`)
+            .then (res => {
+                console.log(res);
+            });
+            //redirect user to feed or profile window.location.pathname = '/feed';
+            //retrieve user info to display on profile 
     }
 
     render() {
         return (
             <div className=''>
+                <CamiBookNav />
 
                 <form action="/login" method="GET">
                     <div className="login-con">
