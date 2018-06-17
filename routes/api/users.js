@@ -40,7 +40,7 @@ router.post("/register", (req, res) => {
         email: req.body.email
     }).then(user => {
         if (user) {
-            error.email = "Email already exist";
+            errors.email = "Email already exist";
             return res.status(400).json(errors);
         } else {
             const avatar = gravatar.url(req.body.email, {

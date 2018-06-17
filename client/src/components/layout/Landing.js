@@ -6,7 +6,7 @@ class Landing extends Component {
     return (
       <div className="landing">
         <div className="dark-overlay landing-inner text-light">
-          <div className="container">
+          <div className="container" id="landing-con">
             <div className="row">
               <div className="col-md-12 text-center">
                 <h1 className="display-3 mb-4 main-banner">Camibook</h1>
