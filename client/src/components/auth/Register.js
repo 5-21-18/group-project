@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { withRouter } from "react-router-dom";
 import classnames from "classnames";
 import { connect } from "react-redux";
-import { registeruser } from "../../actions/authActions";
+import { registerUser } from "../../actions/authActions";
 
 class Register extends Component {
   constructor() {
@@ -18,6 +18,12 @@ class Register extends Component {
 
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
+  }
+
+  componentDidMount() {
+    if (this.props.auth.isAuthenticated) {
+      this.props.history.push("/dashboard");
+    }
   }
 
   componentWillReceiveProps(nextProps) {
@@ -41,7 +47,7 @@ class Register extends Component {
       password2: this.state.password2
     };
 
-    this.props.registeruser(newUser, this.props.history);
+    this.props.registerUser(newUser, this.props.history);
   }
 
   render() {
@@ -133,7 +139,7 @@ class Register extends Component {
 }
 
 Register.propTypes = {
-  registeruser: PropTypes.func.isRequired,
+  registerUser: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
   errors: PropTypes.object.isRequired
 };
@@ -145,5 +151,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { registeruser }
+  { registerUser }
 )(withRouter(Register));
