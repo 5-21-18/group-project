@@ -22,6 +22,6 @@
   },
   "proxy": "http://localhost:5000",
   "devDependencies": {
-    "bootstrap": "^3.7.7"
+    "bootstrap": "^4.1.1"
   }
 }
