@@ -22,7 +22,7 @@ const ProfileSchema = new Schema({
     instagram: {
       type: String
     },
-    tweeter: {
+    twitter: {
       type: String
     },
     facebook: {
