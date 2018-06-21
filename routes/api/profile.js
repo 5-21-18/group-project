@@ -20,7 +20,7 @@ router.get("/test", (req, res) =>
 );
 
 /****************************************/
-//Route: Get api/profile---gets 'current' user profile
+//Route: Get api/profile
 //Desc: Get current user profile
 //Access: private
 router.get(
@@ -46,7 +46,7 @@ router.get(
 );
 /*****************************************************/
 
-//Route: POST api/profile/all
+//Route: Get api/profile/all
 //Desc: get all profiles
 //Access: public
 router.get("/all", (req, res) => {
@@ -70,7 +70,7 @@ router.get("/all", (req, res) => {
 });
 
 /******************************************************/
-//Route: POST api/profile/handle/:hanlde
+//Route:  Get api/profile/handle/:hanlde
 //Desc: get profile by handle
 //Access: public
 router.get("/handle/:handle", (req, res) => {
@@ -92,7 +92,7 @@ router.get("/handle/:handle", (req, res) => {
 });
 /******************************************************/
 
-//Route: POST api/profile/user/:user_id
+//Route: Get api/profile/user/:user_id
 //Desc: get profile by user id
 //Access: public
 router.get("/user/:user_id", (req, res) => {

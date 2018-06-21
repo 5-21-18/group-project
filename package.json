@@ -33,6 +33,7 @@
     "path": "^0.12.7",
     "prop-types": "^15.6.1",
     "react-bootstrap": "^0.32.1",
+    "react-moment": "^0.7.6",
     "validator": "^10.3.0"
   },
   "devDependencies": {
