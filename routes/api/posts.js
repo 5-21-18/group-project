@@ -61,14 +61,21 @@ router.post(
     session: false
   }),
   (req, res) => {
-    const { errors, isValid } = validatePostInput(req.body);
-    //check validation
-    if (!isValid) {
-      //if any errors, send status 400 with errors
-      return res.status(400).json(errors);
-    }
+    // const { errors, isValid } = validatePostInput(req.body);
+    // //check validation
+    // if (!isValid) {
+    //   //if any errors, send status 400 with errors
+    //   return res.status(400).json(errors);
+    // }
 
     const newPost = new Post({
+      category: req.body.category,
+      bname: req.body.bname,
+      isbn: req.body.isbn,
+      year: req.body.year,
+      description: req.body.description,
+      thoughts: req.body.thoughts,
+      cover: req.body.cover,
       text: req.body.text,
       name: req.body.name,
       avatar: req.body.avatar,
@@ -184,7 +191,7 @@ router.post(
           //splice out of array
           post.likes.splice(removeIndex, 1);
           //save
-          post.save().then(post => rest.json(post));
+          post.save().then(post => res.json(post));
         })
         .catch(err =>
           res.status(404).json({
@@ -215,7 +222,7 @@ router.post(
     Post.findById(req.params.id)
       .then(post => {
         const newComment = {
-          text: req.body.text,
+          bname: req.body.bname,
           name: req.user.name,
           avatar: req.user.avatar,
           user: req.user.id
