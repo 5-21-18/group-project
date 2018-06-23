@@ -13,10 +13,10 @@ class PostForm extends Component {
       bname: "",
       isbn: "",
       year: "",
-      desc: "",
+      description: "",
       thoughts: "",
       cover: "",
-      text: "",
+      // text: "",
       errors: {}
     };
 
@@ -40,16 +40,25 @@ class PostForm extends Component {
       bname: this.state.bname,
       isbn: this.state.isbn,
       year: this.state.year,
-      desc: this.state.desc,
+      description: this.state.description,
       thoughts: this.state.thoughts,
       cover: this.state.cover,
-      text: this.state.text,
+      // text: this.state.text,
       name: user.name,
       avatar: user.avatar
     };
 
     this.props.addPost(newPost);
-    this.setState({ text: "" });
+    this.setState({
+      category: "",
+      bname: "",
+      isbn: "",
+      year: "",
+      description: "",
+      thoughts: "",
+      cover: ""
+      // text: ""
+    });
   }
 
   onChange(e) {
@@ -57,7 +66,7 @@ class PostForm extends Component {
   }
 
   render() {
-    const { errors } = this.state;
+    //const { errors } = this.state;
 
     return (
       <div className="post-form mb-3 col-md-8">
@@ -93,9 +102,9 @@ class PostForm extends Component {
                   onChange={this.onChange}
                 />
                 <TextAreaFieldGroup
-                  placeholder="Description"
-                  name="desc"
-                  value={this.state.desc}
+                  placeholder="description"
+                  name="description"
+                  value={this.state.description}
                   onChange={this.onChange}
                 />
                 <TextAreaFieldGroup
@@ -104,8 +113,8 @@ class PostForm extends Component {
                   value={this.state.thoughts}
                   onChange={this.onChange}
                 />
-                <button className="btn btn-secondary btn-sm btn-cover">
-                  <label for="cover">Select a book cover</label>
+                {/* <button className="btn btn-secondary btn-sm btn-cover">
+                  <label htmlFor="cover">Select a book cover</label>
                   <input
                     type="file"
                     accept="image/*"
@@ -116,7 +125,7 @@ class PostForm extends Component {
                     style={{ opacity: "0" }}
                   />
                   Book cover
-                </button>
+                </button> */}
               </div>
               <button
                 type="submit"
