@@ -31,7 +31,10 @@ class PostItem extends Component {
     const { post, auth, showActions } = this.props;
 
     return (
-      <div className="card card-body mb-3 col-md-12" style={{ margin: "auto" }}>
+      <div
+        className="card card-body mb-3 col-md-12"
+        style={{ margin: "auto", backgroundColor: "#e9f0f6" }}
+      >
         <div className="row">
           <div className="col-md-2">
             <a href="profile.html">
@@ -45,12 +48,32 @@ class PostItem extends Component {
             <p className="text-center">{post.name}</p>
           </div>
           <div className="col-md-10">
-            <p className="lead">Name: {post.bname}</p>
-            <p className="lead">Category: {post.category}</p>
-            <p className="lead">ISBN: {post.isbn}</p>
-            <p className="lead">Year Published: {post.year}</p>
-            <p className="lead">Description: {post.description}</p>
-            <p className="lead">My Thoughts: {post.thoughts}</p>
+            <p className="lead">
+              <span className="lead font-weight-bold">Book Name:</span>{" "}
+              <span className="lead small font-italic text-uppercase">
+                {post.bname}
+              </span>
+            </p>
+            <p className="lead">
+              <span className="lead font-weight-bold">Category:</span>{" "}
+              <span className="lead small">{post.category}</span>
+            </p>
+            <p className="lead">
+              <span className="lead font-weight-bold">ISBN:</span>{" "}
+              <span className="small">{post.isbn}</span>
+            </p>
+            <p className="lead">
+              <span className="lead font-weight-bold">Year Published:</span>{" "}
+              <span className="small">{post.year}</span>
+            </p>
+            <p className="lead">
+              <span className="lead font-weight-bold">Description:</span>{" "}
+              <span className="small">{post.description}</span>
+            </p>
+            <p className="lead">
+              <span className="lead font-weight-bold">My Thoughts:</span>{" "}
+              <span className="small">{post.thoughts}</span>
+            </p>
             {showActions ? (
               <span>
                 <button
@@ -60,7 +83,7 @@ class PostItem extends Component {
                 >
                   <i
                     className={classnames("fas fa-thumbs-up", {
-                      "text-info": this.findUserLike(post.likes)
+                      "text-success": this.findUserLike(post.likes)
                     })}
                   />
                   <span className="badge badge-light">{post.likes.length}</span>
@@ -74,7 +97,7 @@ class PostItem extends Component {
                 </button>
                 <Link
                   to={`/post/${post._id}`}
-                  className="btn btn-sm btn-success mr-1"
+                  className="btn btn-sm btn-primary mr-1"
                 >
                   Comments
                 </Link>
@@ -84,7 +107,7 @@ class PostItem extends Component {
                     type="button"
                     className="btn btn-sm btn-danger mr-1"
                   >
-                    <i className="fas fa-times" />
+                    Delete
                   </button>
                 ) : null}
               </span>

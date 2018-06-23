@@ -102,7 +102,7 @@ class PostForm extends Component {
                   onChange={this.onChange}
                 />
                 <TextAreaFieldGroup
-                  placeholder="description"
+                  placeholder="Description"
                   name="description"
                   value={this.state.description}
                   onChange={this.onChange}
@@ -129,7 +129,7 @@ class PostForm extends Component {
               </div>
               <button
                 type="submit"
-                className="btn btn-success btn-sm float-right"
+                className="btn btn-primary btn-sm float-right"
               >
                 Submit
               </button>

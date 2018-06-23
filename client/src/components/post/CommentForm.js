@@ -46,9 +46,9 @@ class CommentForm extends Component {
     const { errors } = this.state;
 
     return (
-      <div className="post-form mb-3">
+      <div className="post-form mb-3" style={{ width: "50%" }}>
         <div className="card card-info">
-          <div className="card-header bg-infoz text-white">Comment...</div>
+          <div className="card-header bg-info text-white">Comment...</div>
           <div className="card-body">
             <form onSubmit={this.onSubmit}>
               <div className="form-group">
@@ -60,7 +60,7 @@ class CommentForm extends Component {
                   error={errors.bname}
                 />
               </div>
-              <button type="submit" className="btn btn-dark">
+              <button type="submit" className="btn btn-sm btn-dark">
                 Submit
               </button>
             </form>

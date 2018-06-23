@@ -17,7 +17,7 @@ module.exports = function validatePostInput(data) {
   }
 
   if (Validator.isEmpty(data.bname)) {
-    errors.bname = "Name is required";
+    errors.bname = "This field is required";
   }
 
   return {
