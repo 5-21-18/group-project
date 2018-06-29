@@ -1,77 +1,70 @@
-//build the search bar here
-//still need to research how search bar logic works
-
 import React from 'react';
-import { Form, FormControl, FormGroup } from 'react-bootstrap';
-import axios from 'axios';
+import { Form, FormControl, FormGroup, Button } from 'react-bootstrap';
+import { connect } from "react-redux";
+import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
+import PostItem from './posts/PostItem';
+import { getPosts } from "../actions/postActions";
+//https://medium.com/@yaoxiao1222/implementing-search-filter-a-list-on-redux-react-bb5de8d0a3ad
+//https://stackoverflow.com/questions/40342381/react-redux-create-a-search-filter
 
-
-export default class Searchbar extends React.Component{
-    constructor(props){
-        super(props);
+class Search extends React.Component{
+    constructor(book){
+        super();
+        this.book = book;
         this.state = {
-            titles: '',
-            authors: ''
-        };
+            input: ""
+        }
     }
 
-
-
-
-
-
+    componentDidMount() {
+        this.props.getPosts();
+    }
+    
     updateTitles(e){
-        axios.get(`https://localhost:5000/api/books/`)
-            .then(res => {
-                console.log(res);
-            });
-        this.setState({titles: e.target.value});
+        this.setState({input: e.target.value});
 
+        const { posts } = this.props.post;
+
+        const listTitles = posts.map((post) => {
+            console.log(post);
+            if(this.state.input === post.bname){
+                console.log(post._id);
+                let item = <PostItem key={post._id} post={post} />
+
+                this.book = item;
+                
+            }
+        });
 
     }
 
-    updateAuthors(e){
-        this.setState({authors: e.target.value});
-    }
+    
 
-    render(){
-        let filteredTitles = this.props.books.filter((book) => {
-            return book.title.indexOf(this.state.titles) !== -1;
-        });
-        const listTitles = filteredTitles.map((book, index) => (
-            <li key={index}>
-              {book.title}: {book.author}
-            </li>
-          ));
-        let filteredAuthors = this.props.books.filter((book) => {
-            return book.author.indexOf(this.state.authors) !== -1;
-        });
-        const listAuthors = filteredAuthors.map((book, index) => (
-            <li key={index}>
-              {book.title}: {book.author}
-            </li>
-        ));
+    render(book){
+
+        console.log(book);
+
         return(
+            
             <div>
-                <Form inline>
+                <h3>Search for a book!</h3>
+                <Form>
                 <FormGroup controlId="form">
                     <FormControl type="text" 
-                        placeholder="Search for titles"  
-                        value={this.state.titles}
-                        onChange={this.updateSearch.bind(this)}/> <br/>
-                    <FormControl type="text"
-                        placeholder="Search for authors"
-                        value={this.state.authors}
-                        onChange={this.updateAuthors.bind(this)}/>
+                        placeholder="Not functional yet"  
+                        value={this.state.input}
+                        onChange={event => this.setState({input: event.target.value})}/> 
                 </FormGroup> 
+                <Button
+                    onClick={this.updateTitles.bind(this)}
+                >Search</Button>
                 </Form>
+                <hr />
                 <div>
-                    <ul>
-                        {listTitles}
-                    </ul>
-                    <ul>
-                        {listAuthors}
-                    </ul>
+                    <Link className="nav-link" to="/post/:id">
+                        {book}
+                    </Link> 
                 </div>
             </div>
             
@@ -79,3 +72,17 @@ export default class Searchbar extends React.Component{
         );
     }
 }
+
+Search.propTypes = {
+    getPosts: PropTypes.func.isRequired,
+    // posts: PropTypes.array.isRequired
+};
+
+const mapStateToProps = state => ({
+    post: state.post
+  });
+  
+  export default connect(
+    mapStateToProps,
+    { getPosts }
+  )(Search);
