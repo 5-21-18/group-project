@@ -1,19 +1,16 @@
 import React from 'react';
 import { Form, FormControl, FormGroup, Button } from 'react-bootstrap';
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 import PostItem from './posts/PostItem';
 import { getPosts } from "../actions/postActions";
-//https://medium.com/@yaoxiao1222/implementing-search-filter-a-list-on-redux-react-bb5de8d0a3ad
-//https://stackoverflow.com/questions/40342381/react-redux-create-a-search-filter
 
 class Search extends React.Component{
-    constructor(book){
+    constructor(){
         super();
-        this.book = book;
         this.state = {
-            input: ""
+            input: "",
+            book: ""
         }
     }
 
@@ -30,9 +27,7 @@ class Search extends React.Component{
             console.log(post);
             if(this.state.input === post.bname){
                 console.log(post._id);
-                let item = <PostItem key={post._id} post={post} />
-
-                this.book = item;
+                this.setState({book: <PostItem key={post._id} post={post} />});
                 
             }
         });
@@ -41,9 +36,10 @@ class Search extends React.Component{
 
     
 
-    render(book){
+    render(){
 
-        console.log(book);
+
+        console.log(this.state.book);
 
         return(
             
@@ -62,9 +58,9 @@ class Search extends React.Component{
                 </Form>
                 <hr />
                 <div>
-                    <Link className="nav-link" to="/post/:id">
-                        {book}
-                    </Link> 
+                    
+                    {this.state.book}
+                    
                 </div>
             </div>
             
